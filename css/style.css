@@ -2,7 +2,7 @@ body {
     font-family: 'Domine', serif;
     text-align: center;
     font-size: 1.1em;
-    background: lightpink;
+    background-color: lightpink;
     color: #333;
 }
 
@@ -50,12 +50,18 @@ p {
 #showcase {
     min-height: 450px;
     color: rgb(130, 43, 58);
-    text-align: center;
+
+}
+
+#showcase>.conteudo {
+    display: inline-block;
+    position: relative;
+
 }
 
 #showcase .bg-imagem {
     position: absolute;
-    background: url("images/bg-image.jpg");
+    background: url("../images/bg-image.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -76,35 +82,42 @@ p {
     padding-bottom: 2em;
 }
 
-.card {
-    display: block;
+.card-img {
     width: 100%;
-    height: auto;
+    height: 100%;
 
 }
 
 
-#section-2 .produtos {
+#section-2>.produtos {
+
+    display: flex;
+    gap: 30px;
     width: 940px;
     margin: 0 auto;
-    padding: 50px 0px;
-    text-align: center;
 }
 
-#section-2 .produtos li {
+.produtos>li {
     display: inline-block;
-    text-align: center;
-    vertical-align: auto;
-    width: 30%;
-    margin: 0 1.5%;
+    width: 33%;
     box-sizing: border-box;
     background: white;
     color: rgb(130, 43, 58);
+    margin: 20px 0 20px 0;
 
 }
 
 .card-conteudo {
     padding: 1.5em;
+    letter-spacing: 3px;
+    text-align: center;
+
+}
+
+.card {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 #section-3 {
@@ -113,18 +126,31 @@ p {
     padding: 2em;
 }
 
+.box-flex {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
 #caixa-1 {
-    color: white;
-    width: 627px;
+    background: rgb(249, 220, 224);
+    color: rgb(130, 43, 58);
+    width: 630px;
     height: 300px;
-    display: inline-block;
-    vertical-align: top;
+
+}
+
+#caixa-2 {
+    background: rgb(130, 43, 58);
+    color: rgb(249, 220, 224);
+    width: 630px;
+    height: 300px;
 }
 
 #caixa-1 img {
     width: 30px;
     height: 30px;
-    padding: 1em;
+    padding: 2em;
 }
 
 #caixa-1 img:hover {
@@ -136,15 +162,7 @@ p {
     text-decoration: none;
 }
 
-#caixa-2 {
-    background: rgb(249, 220, 224);
-    color: rgb(130, 43, 58);
-    width: 630px;
-    height: 300px;
-    display: inline-block;
-    vertical-align: top;
-    padding: 0;
-}
+
 
 #main-footer div {
     text-align: center;
@@ -168,4 +186,15 @@ p {
     color: rgb(199, 188, 198);
     cursor: pointer;
     text-decoration: underline;
+}
+
+/* ==================== TENTANDO ======================= */
+
+@media (max-width:600px) {
+    #section-2>.produtos {
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }
